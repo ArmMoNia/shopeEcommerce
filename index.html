@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Mall</title>
+    <link
+      rel="icon"
+      href="assets/Title/near-shop-website-favicon-black.png"
+      type="image/x-icon"
+    />
+
+    <link href="/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a class="header-container-logo" href="#">
+          <div>
+            <img
+              src="assets/Logo/nnear-store.png"
+              class="header-container-logo-img"
+            />
+          </div>
+        </a>
+        <div class="header-container-menu">
+          <ul class="header-container-menu-list">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Feature</li>
+            <li>Blog</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="header-container-btn">
+          <!-- type="hidden" -->
+          <input placeholder="Search" class="search-bar-on-top" autofocus />
+          <div class="header-container-btn-icon search-icon-on-top">
+            <i class="fa-sharp fa-solid fa-magnifying-glass fa-lg"></i>
+          </div>
+          <div class="header-container-btn-icon" id="header-cart-icon">
+            <i class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
+          </div>
+          <div class="header-container-btn-icon">
+            <i class="fa-regular fa-heart fa-lg"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div>
+        <button class="banner-button-prev"></button>
+      </div>
+      <div class="banner-content">
+        <p class="banner-content-title">New Season</p>
+        <p class="banner-content-description">Jackets Collections</p>
+        <button class="banner-content-btn">Shop now</button>
+      </div>
+      <div>
+        <button class="banner-button-next"></button>
+      </div>
+    </section>
+    <section>
+      <div class="show-products">
+        <div class="show-products-header">
+          <h2>PRODUCT OVERVIEW</h2>
+          <div class="show-products-filters">
+            <div>
+              <ul class="show-products-filters-menu">
+                <li>All Products</li>
+                <li>Men</li>
+                <li>Women</li>
+              </ul>
+            </div>
+            <div class="show-products-filters-search">
+              <button class="show-products-search-btn">Search</button>
+            </div>
+          </div>
+          <div class="show-products-searchbar">
+            <div class="show-products-searchbar-arrow"></div>
+            <input
+              class="show-products-searchbar-box"
+              placeholder="Find Items"
+            />
+          </div>
+        </div>
+        <div class="show-products-items">
+          <div class="show-products-items-list" id="showItems"></div>
+          <div class="load-more-item">
+            <button>Load More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="popup-item-detail hidden">
+        <button class="close-popup">
+          <i class="fa-solid fa-x fa-2xl"></i>
+        </button>
+        <div class="item-detail-content">
+          <div class="item-detail-img">
+            <div class="display-img"></div>
+          </div>
+          <div class="item-detail-buy">
+            <div class="item-detail-info">
+              <h2 class="item-detail-info-name">Lightweight Jacket</h2>
+              <p class="item-detail-info-price">$58.79</p>
+              <p class="item-detail-info-decription"></p>
+            </div>
+            <div class="item-detail-select">
+              <div class="item-detail-select-prop">
+                <div class="item-detail-select-prop-desc">Size</div>
+                <div>Choose an option</div>
+              </div>
+              <div class="item-detail-select-prop">
+                <div class="item-detail-select-prop-desc">Color</div>
+                <div>Choose an option</div>
+              </div>
+              <div class="item-detail-add-remove">
+                <button class="item-detail-add-remove-btn">-</button>
+                <div class="item-detail-add-remove-num">1</div>
+                <button class="item-detail-add-remove-btn">+</button>
+                <button class="item-detail-add-to-cart-btn">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="cart-bar">
+      <div class="cart-bar-title">
+        <div>Your Cart</div>
+        <div>X</div>
+      </div>
+      <div class="cart-bar-item-list">
+        <i class="cart-bar-no-item">No Item, Let's shop some cloths!!!</i>
+      </div>
+      <div class="cart-bar-total-price hidden">
+        <p>Total: $75.00</p>
+      </div>
+      <div class="cart-bar-checkout hidden">
+        <button class="cart-bar-checkout-btn">Check Out</button>
+      </div>
+    </div>
+    <section><div class="overlay hidden"></div></section>
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="footer-info-type">
+          <h5>CATEGORIES</h5>
+          <ul>
+            <li>Women</li>
+            <li>Men</li>
+            <li>Shoes</li>
+            <li>Watches</li>
+          </ul>
+        </div>
+        <div class="footer-info-type">
+          <h5>HELP</h5>
+          <ul>
+            <li>Track Order</li>
+            <li>Returns</li>
+            <li>Shipping</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+        <div class="footer-info-type">
+          <h5>GET IN TOUCH</h5>
+          <p>
+            Any questions? Let us know in store at xth floor, 111 xxxxx St, Xxx
+            Xxx , XX 11111 or call us on (+1) 11 111 1111
+          </p>
+        </div>
+        <div class="footer-info-type">
+          <h5>NEWSLETTER</h5>
+          <form class="footer-info-form">
+            <input type="email" placeholder="email@example.com" />
+          </form>
+          <button class="footer-info-btn">SUBSCRIBE</button>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div>🏦 🏦 🏦 🏦</div>
+        <p>Copyright ©2023 All rights reserved</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/script/renderItem.js"></script>
+    <script type="module" src="/script/script.js"></script>
+    <script type="module" src="/script/cartBar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cd625529a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
