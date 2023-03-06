@@ -28,7 +28,7 @@
   transition: ease-in-out 1s;
 }
 
-/* แก้เป็น icon */
+/* change to icon */
 .close-popup {
   position: absolute;
   left: 97.5%;
@@ -49,11 +49,8 @@
 .item-detail-buy {
   width: 50%;
   margin: 30px;
-  /* background-color: red; */
 }
-/* .item-detail-img {
-  margin-right: 100px;
-} */
+
 .item-detail-buy {
   display: flex;
   flex-direction: column;

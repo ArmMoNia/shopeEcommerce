@@ -71,9 +71,6 @@
   display: block;
 }
 
-/* .header-container-btn-icon:hover {
-} */
-/* toggle when scrollY > 0*/
 .sticky-header {
   position: fixed;
   background-color: white;

@@ -20,6 +20,7 @@ const render = function (myData) {
                   </p >
         <p class="product-price">$ ${myData[i].price}</p>
       </div>
+      // add logic fav
       <div>
         <img style="height: 20px" src="assets/Icons/fav.png" />
       </div>
