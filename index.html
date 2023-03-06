@@ -68,13 +68,13 @@
           <h2>PRODUCT OVERVIEW</h2>
           <div class="show-products-filters">
             <div>
-              <ul class="show-products-filters-menu">
+              <!-- <ul class="show-products-filters-menu">
                 <li>All Products</li>
                 <li>Men</li>
                 <li>Women</li>
-              </ul>
+              </ul> -->
             </div>
-            <div class="show-products-filters-search">
+            <div class="show-products-filters-search hidden">
               <button class="show-products-search-btn">Search</button>
             </div>
           </div>
@@ -88,9 +88,9 @@
         </div>
         <div class="show-products-items">
           <div class="show-products-items-list" id="showItems"></div>
-          <div class="load-more-item">
+          <!-- <div class="load-more-item">
             <button>Load More</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -101,7 +101,7 @@
         </button>
         <div class="item-detail-content">
           <div class="item-detail-img">
-            <div class="display-img"></div>
+            <div class="display-img"><img id="iiiimg" /></div>
           </div>
           <div class="item-detail-buy">
             <div class="item-detail-info">
@@ -110,18 +110,22 @@
               <p class="item-detail-info-decription"></p>
             </div>
             <div class="item-detail-select">
-              <div class="item-detail-select-prop">
+              <!-- <div class="item-detail-select-prop">
                 <div class="item-detail-select-prop-desc">Size</div>
                 <div>Choose an option</div>
-              </div>
-              <div class="item-detail-select-prop">
+              </div> -->
+              <!-- <div class="item-detail-select-prop">
                 <div class="item-detail-select-prop-desc">Color</div>
                 <div>Choose an option</div>
-              </div>
+              </div> -->
               <div class="item-detail-add-remove">
-                <button class="item-detail-add-remove-btn">-</button>
-                <div class="item-detail-add-remove-num">1</div>
-                <button class="item-detail-add-remove-btn">+</button>
+                <button class="item-detail-add-remove-btn" id="decreaseQty">
+                  -
+                </button>
+                <div class="item-detail-add-remove-num" id="itemQty"></div>
+                <button class="item-detail-add-remove-btn" id="increaseQty">
+                  +
+                </button>
                 <button class="item-detail-add-to-cart-btn">Add to cart</button>
               </div>
             </div>
@@ -186,9 +190,8 @@
       </div>
     </footer>
 
-    <script type="module" src="/script/renderItem.js"></script>
-    <script type="module" src="/script/script.js"></script>
-    <script type="module" src="/script/cartBar.js"></script>
+    <script type="module" src="/script/main.js"></script>
+
     <script
       src="https://kit.fontawesome.com/cd625529a9.js"
       crossorigin="anonymous"

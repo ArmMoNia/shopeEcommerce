@@ -28,4 +28,5 @@ const render = function (myData) {
     showItems.insertAdjacentElement("beforeend", element);
   }
 };
+
 export default render;

@@ -84,8 +84,8 @@
   line-height: 30px;
   overflow-x: hidden;
   overflow-y: auto;
-  min-height: 50px;
-  max-height: 160px;
+  min-height: 200px;
+  max-height: 260px;
   padding-right: 10px;
   text-align: justify;
 }
