@@ -1,5 +1,10 @@
-// display cart bar
+import popUpHelper from "../helper/popUp.js";
+const closeCart = document.getElementById("closeCart");
+closeCart.addEventListener("click", function () {
+  popUpHelper.closeHelper();
+});
 
+// display cart bar
 const addItemToCartBar = function (addItem) {
   let totalPrice = 0;
   const totalPriceDisplay = document.querySelector(".cart-bar-total-price");

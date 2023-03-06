@@ -87,10 +87,25 @@
   border: none;
   cursor: pointer;
   padding: 10px;
-  transition: ease-in-out 0.5s;
+  transition: ease-in 0.3s;
   border-radius: 2px;
 }
 .delItem:hover {
   background-color: red;
   color: white;
+}
+.cart-bar-title-text {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+#closeCart {
+  cursor: pointer;
+  transition: ease-in 0.3s;
+  font-size: 25px;
+  line-height: none;
+  margin-right: 20px;
+}
+#closeCart:hover {
+  color: red;
 }
