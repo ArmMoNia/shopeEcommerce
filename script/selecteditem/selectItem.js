@@ -36,7 +36,7 @@ const selectItem = function (myData) {
   });
   //  decrease Qty
   decreaseQtyBtn.addEventListener("click", function () {
-    qty >= 1 ? qty-- : qty;
+    qty > 1 ? qty-- : qty;
     addItem.qty = qty;
     itemQty.innerHTML = qty;
   });

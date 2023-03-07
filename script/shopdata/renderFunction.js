@@ -22,7 +22,7 @@ const render = function (myData) {
       </div>
       
       <div>
-        <img style="height: 20px" src="assets/Icons/fav.png" />
+      <i class="fa-thin fa-sharp fa-regular fa-heart fav"></i>
       </div>
     </div>
     `;

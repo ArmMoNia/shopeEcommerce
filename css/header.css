@@ -45,10 +45,24 @@
   margin-left: 30px;
   cursor: pointer;
 }
-
+.header-container-btn-icon {
+  position: relative;
+}
+.showQty {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.185);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px;
+  min-width: 22px;
+  top: -26px;
+  left: 24px;
+}
 .header-container-btn-icon > i:hover {
   color: rgb(0, 183, 255);
 }
+
 .disable-search-icon {
   display: none;
 }

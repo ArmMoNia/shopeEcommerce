@@ -6,10 +6,27 @@ closeCart.addEventListener("click", function () {
 
 // display cart bar
 const addItemToCartBar = function (addItem) {
+  let qty = 0;
   let totalPrice = 0;
   const totalPriceDisplay = document.querySelector(".cart-bar-total-price");
   const checkOutBtn = document.querySelector(".cart-bar-checkout");
   const cartItemList = document.querySelector(".cart-bar-item-list");
+  const cartQty = document.querySelector(".showQty");
+
+  console.log(addItem);
+
+  // get qty
+  // but when click del from cart this dont del
+  addItem.forEach((item) => {
+    qty += item.qty;
+  });
+  if (qty > 0) {
+    cartQty.classList.remove("hidden");
+    cartQty.innerHTML = qty;
+  } else if (qty === 0) {
+    cartQty.classList.add("hidden");
+  }
+
   // add logic for init
   if (addItem.length === 0) {
     // render if have no item that user add to cart
