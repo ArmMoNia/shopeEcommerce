@@ -31,15 +31,18 @@
 .footer-info-type > p {
   font-size: 14px;
 }
-
-.footer-info-type > ul > li {
+.footer-info-type > div {
+  display: flex;
+  flex-direction: column;
+}
+.footer-info-type > div > span {
   font-size: 14px;
   width: auto;
   cursor: pointer;
   padding: auto;
   margin-right: auto;
 }
-.footer-info-type > ul > li:hover {
+.footer-info-type > div > span:hover {
   color: rgb(38, 177, 231);
 }
 

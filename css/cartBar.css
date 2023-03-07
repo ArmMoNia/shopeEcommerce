@@ -103,7 +103,7 @@
   cursor: pointer;
   transition: ease-in 0.3s;
   font-size: 25px;
-  line-height: none;
+  /* line-height: none; */
   margin-right: 20px;
 }
 #closeCart:hover {

@@ -77,4 +77,5 @@
   height: 90px;
   transition: ease-in-out 0.7s;
   z-index: 5;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.377);
 }

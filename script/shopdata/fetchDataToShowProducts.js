@@ -5,25 +5,24 @@ import selectItem from "../selectedItem/selectItem.js";
 const setUpDataShop = {
   api_url: "https://fakestoreapi.com/products",
 
-  fetchItems: function () {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const response = await fetch(this.api_url);
-        const data = await response.json();
-        // console.log(data);
-        this.pushItem(data);
-        // render shop
-        render(this.myData);
-        selectItem(this.myData);
+  fetchItems: async function () {
+    // return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(this.api_url);
+      const data = await response.json();
+      // console.log(data);
+      this.pushItem(data);
+      // render shop
+      render(this.myData);
+      selectItem(this.myData);
 
-        resolve();
-      } catch (err) {
-        console.error(`${err} 💥💥💥💥`);
-        reject(err);
-      }
-    });
+      // resolve();
+    } catch (err) {
+      console.error(`${err} 💥💥💥💥`);
+      // reject(err);
+    }
   },
-
+  // });
   myData: [],
 
   pushItem: function (data) {
