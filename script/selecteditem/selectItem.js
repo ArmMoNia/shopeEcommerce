@@ -22,7 +22,6 @@ const selectItem = function (myData) {
           const copyObj = Object.assign({}, myData[index]);
           renderSelectedItem(myData[index]);
           addItem = copyObj;
-          console.log(addItem);
         }
       });
     });
@@ -43,8 +42,6 @@ const selectItem = function (myData) {
   // add to cart function
   const addToCart = () => {
     cartData.push(addItem);
-    console.log(cartData);
-
     addItemToCartBar(cartData);
     qty = 1;
     itemQty.innerHTML = qty;

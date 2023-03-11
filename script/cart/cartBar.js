@@ -1,4 +1,5 @@
 import popUpHelper from "../helper/popUp.js";
+import checkOut from "./checkout.js";
 const closeCart = document.getElementById("closeCart");
 closeCart.addEventListener("click", function () {
   popUpHelper.closeHelper();
@@ -12,8 +13,6 @@ const addItemToCartBar = function (addItem) {
   const checkOutBtn = document.querySelector(".cart-bar-checkout");
   const cartItemList = document.querySelector(".cart-bar-item-list");
   const cartQty = document.querySelector(".showQty");
-
-  console.log(addItem);
 
   // get qty
   // but when click del from cart this dont del
@@ -58,6 +57,7 @@ const addItemToCartBar = function (addItem) {
     checkOutBtn.classList.remove("hidden");
     totalPriceDisplay.innerHTML = `Total: $ ${totalPrice.toLocaleString()}`;
   }
+  checkOut(addItem);
   // add delItem logic
   if (addItem.length > 0) {
     const delItem = document.querySelectorAll(".delItem");

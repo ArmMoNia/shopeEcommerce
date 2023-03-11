@@ -1,7 +1,9 @@
 const blackDrop = document.querySelector(".overlay");
-const closeItemDetail = document.querySelector(".close-popup");
+const closePopup = document.querySelectorAll(".close-popup");
 const cartBar = document.querySelector(".cart-bar");
 const showItemDetail = document.querySelector(".popup-item-detail");
+const checkout = document.querySelector(".checkout");
+const closeCheckout = document.querySelector(".close-checkout");
 const popUpHelper = {
   showItemPopUp() {
     if (blackDrop.classList.contains("hidden")) {
@@ -12,14 +14,18 @@ const popUpHelper = {
     blackDrop.classList.add("hidden");
     cartBar.classList.remove("show-cart-bar");
     showItemDetail.classList.add("hidden");
+    checkout.classList.add("hidden");
   },
   // Closed pop up
   closePopUp() {
     const closed = () => this.closeHelper();
     if (!blackDrop.classList.contains("hidden")) {
-      closeItemDetail.addEventListener("click", function () {
-        closed();
+      closePopup.forEach((close) => {
+        close.addEventListener("click", function () {
+          closed();
+        });
       });
+
       blackDrop.addEventListener("click", function () {
         closed();
       });
@@ -35,6 +41,7 @@ const popUpHelper = {
     cartBar.classList.remove("show-cart-bar");
     showItemDetail.classList.add("hidden");
   },
+
   active() {
     this.showItemPopUp();
     this.closePopUp();
