@@ -72,6 +72,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  height: 0px;
 }
 
 .show-products-searchbar-arrow {
