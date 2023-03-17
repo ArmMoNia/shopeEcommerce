@@ -1,0 +1,14 @@
+@media screen and (min-width: 375px) {
+  .header-container {
+    height: 70px;
+    width: 375px;
+  }
+  .header-container-logo-img {
+    width: 60px;
+    padding: 0;
+    margin: 0;
+  }
+  .header-container-menu-list > li {
+    display: none;
+  }
+}
