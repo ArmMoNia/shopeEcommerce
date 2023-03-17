@@ -4,7 +4,7 @@
 
 /* Header */
 .header-container {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   left: 0;
   display: flex;
@@ -31,6 +31,7 @@
   align-items: center;
 }
 .header-container-menu-list > li {
+  display: block;
   margin-right: 25px;
   cursor: pointer;
   transition: ease-in-out 0.1s;

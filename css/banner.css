@@ -1,9 +1,10 @@
 /* Banner */
 .banner {
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +14,9 @@
   max-width: 400px;
   margin: 0 1100px 0 150px;
   transition: ease-in-out 0.3s;
+}
+.banner-content-title {
+  color: rgb(66, 61, 61);
 }
 .banner-content-description {
   font-size: 65px;
@@ -35,6 +39,7 @@
 
 .banner-button-next,
 .banner-button-prev {
+  display: block;
   opacity: 0;
   width: 0;
   height: 0;
