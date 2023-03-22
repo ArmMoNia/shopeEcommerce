@@ -11,7 +11,6 @@ const selectItem = function (myData) {
   // init data
   let addItem;
   let qty = 1;
-
   itemQty.innerHTML = qty;
 
   let productsImg = document.querySelectorAll(".show-products-items-img");

@@ -15,7 +15,7 @@ const addItemToCartBar = function (addItem) {
   const cartQty = document.querySelector(".showQty");
 
   // get qty
-  // but when click del from cart this dont del
+
   addItem.forEach((item) => {
     qty += item.qty;
   });
@@ -26,7 +26,6 @@ const addItemToCartBar = function (addItem) {
     cartQty.classList.add("hidden");
   }
 
-  // add logic for init
   if (addItem.length === 0) {
     // render if have no item that user add to cart
     totalPriceDisplay.classList.add("hidden");
@@ -46,7 +45,9 @@ const addItemToCartBar = function (addItem) {
             item.name.length > 16 ? item.name.slice(0, 16) + ".." : item.name
           }</p>
           <p class="cart-bar-my-item-qty">Qty: ${item.qty}</p>
-          <p class="cart-bar-my-item-price">$ ${item.price * item.qty} </p>
+          <p class="cart-bar-my-item-price">$ ${(
+            item.price * item.qty
+          ).toLocaleString()} </p>
       </div>
       <button class="delItem">Del</button>
       </div>
@@ -58,7 +59,7 @@ const addItemToCartBar = function (addItem) {
     totalPriceDisplay.innerHTML = `Total: $ ${totalPrice.toLocaleString()}`;
   }
   checkOut(addItem);
-  // add delItem logic
+  // del Item
   if (addItem.length > 0) {
     const delItem = document.querySelectorAll(".delItem");
     delItem.forEach((del, index) => {

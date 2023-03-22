@@ -1,23 +1,5 @@
 import render from "./renderFunction.js";
-import selectItem from "../selectedItem/selectItem.js";
-// const filterBNtn = document.querySelectorAll(".filter");
-// const filterItems = (category = "All Products", myData) => {
-//   const filteredDataWithCategories = myData.filter(
-//     (item) => item.categories === category
-//   );
-//   const filterOther = myData.filter(
-//     (item) => item.categories !== "Clothes" && item.categories !== "Electronics"
-//   );
 
-//   if (category === "All Products") {
-//     render(myData, category);
-//   } else if (category === "Clothes" || category === "Electronics") {
-//     render(filteredDataWithCategories, category);
-//   } else {
-//     render(filterOther, category);
-//   }
-// };
-// fetch data
 const setUpDataShop = {
   api_url: "https://api.escuelajs.co/api/v1/products",
 
@@ -30,7 +12,7 @@ const setUpDataShop = {
       // render shop
       render(this.myData);
     } catch (err) {
-      console.error(`${err} 💥💥💥💥`);
+      console.error(`${err} `);
     }
   },
 

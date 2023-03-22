@@ -17,23 +17,24 @@ checkOutBtn.addEventListener("click", () => {
   checkout.classList.remove("hidden");
   renderCheckout.classList.remove("hidden");
   // Keep backdrop
-
   cartBar.classList.remove("show-cart-bar");
   console.log(itemCheckout);
   renderCheckOut(itemCheckout);
 });
 
-const tableHead = `<tr class="product-sum-head">
+const tableHead = `<thead>
+                  <tr class="product-sum-head">
                       <th>PRODUCT</th>
                       <th></th>
                       <th>PRICE</th>
                       <th>QUANTITY</th>
                       <th>TOTAL</th>
-                  </tr>`;
+                  </tr></thead>`;
 
 const renderCheckOut = (itemCheckout) => {
   checkoutTable.innerHTML =
     tableHead +
+    "<tbody class='arm'>" +
     itemCheckout
       .map((item) => {
         const total = item.qty * item.price;
@@ -46,15 +47,16 @@ const renderCheckOut = (itemCheckout) => {
       />
     </td>
     <td>${item.name}</td>
-    <td>${item.price}</td>
+    <td>$ ${item.price.toLocaleString()}</td>
     <td>${item.qty}</td>
-    <td>${total}</td>
+    <td>$ ${total.toLocaleString()}</td>
   </tr>
   `;
       })
-      .join("");
-  subtotalCheckout.innerHTML = totalPriceCheckout;
-  totalCheckout.innerHTML = totalPriceCheckout;
+      .join("") +
+    "</tbody>";
+  subtotalCheckout.innerHTML = "$ " + totalPriceCheckout.toLocaleString();
+  totalCheckout.innerHTML = "$ " + totalPriceCheckout.toLocaleString();
 };
 
 export default checkOut;
