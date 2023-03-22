@@ -5,14 +5,14 @@ const dropDownArrow = document.querySelector(".show-products-searchbar-arrow");
 const searchIcon = document.querySelector(".search-icon-on-top");
 const searchBarOnTopHeader = document.querySelector(".search-bar-on-top");
 
-const searchBarOnOverview = function () {
-  searchItemBtn.addEventListener("click", function () {
-    searchItemBar.classList.toggle("searchBarClick");
-    searchItemBtn.classList.toggle("searchBtnClick");
-    dropDownArrow.classList.toggle("searchDropClick");
-    // ADD clear input value = ""
-  });
-};
+// const searchBarOnOverview = function () {
+//   searchItemBtn.addEventListener("click", function () {
+//     searchItemBar.classList.toggle("searchBarClick");
+//     searchItemBtn.classList.toggle("searchBtnClick");
+//     dropDownArrow.classList.toggle("searchDropClick");
+//     // ADD clear input value = ""
+//   });
+// };
 
 // Search-icon-on-top
 // Add More logic
@@ -27,4 +27,4 @@ const searchBarOnOverview = function () {
 //     searchBarOnTopHeader.classList.remove("show-search-bar-on-top");
 //   });
 // };
-export default searchBarOnOverview;
+// export default searchBarOnOverview;

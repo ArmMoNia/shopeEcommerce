@@ -12,13 +12,15 @@ const selectItem = function (myData) {
   let addItem;
   let qty = 1;
   let cartData = [];
+
   itemQty.innerHTML = qty;
 
-  const productsImg = document.querySelectorAll(".show-products-items-img");
+  let productsImg = document.querySelectorAll(".show-products-items-img");
+
   productsImg.forEach((img, index) => {
     img.addEventListener("click", () => {
       myData.forEach((data) => {
-        if (data.id === index + 1) {
+        if (myData.indexOf(data) === index) {
           const copyObj = Object.assign({}, myData[index]);
           renderSelectedItem(myData[index]);
           addItem = copyObj;
@@ -48,8 +50,7 @@ const selectItem = function (myData) {
     popUpHelper.closeImmediately();
   };
 
-  // Click add to cart
-  addToCartBtn.addEventListener("click", addToCart);
+  addToCartBtn.addEventListener("click", () => addToCart());
 };
 
 export default selectItem;

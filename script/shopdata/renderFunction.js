@@ -1,5 +1,8 @@
-const render = function (myData) {
+import selectItem from "../selectedItem/selectItem.js";
+
+const render = function (myData, y) {
   const showItems = document.querySelector(".show-products-items-list");
+  showItems.innerHTML = "";
   for (let i = 0; i < myData.length; i++) {
     const element = document.createElement("div");
     element.classList.add("show-products-items-card");
@@ -28,6 +31,9 @@ const render = function (myData) {
     `;
     showItems.insertAdjacentElement("beforeend", element);
   }
+
+  selectItem(myData);
 };
+
 /* add logic fav */
 export default render;

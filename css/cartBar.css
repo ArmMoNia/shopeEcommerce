@@ -59,10 +59,10 @@
   line-height: 25px;
 }
 .cart-bar-my-item-display {
-  border: 0.5px solid rgba(128, 128, 128, 0.26);
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
 }
 .cart-bar-total-price {
   margin-left: 20px;

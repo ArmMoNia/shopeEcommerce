@@ -1,0 +1,202 @@
+@media screen and (max-width: 1750px) {
+  .show-products-items-img,
+  .product-img {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 1650px) {
+  .show-products-items-img,
+  .product-img {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 1540px) {
+  .banner-content-description {
+    font-size: 50px;
+  }
+  .show-products-items-img,
+  .product-img {
+    height: 300px;
+  }
+  .show-products-items-card {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .banner-content-description {
+    font-size: 40px;
+  }
+  .banner-content {
+    right: 280px;
+  }
+  .show-products-items-img,
+  .product-img {
+    height: 280px;
+  }
+
+  .show-products-items-card {
+    height: 400px;
+  }
+  .footer {
+    height: 400px;
+  }
+  .footer-info {
+    width: 90%;
+  }
+  .footer-info-type {
+    line-height: 30px;
+  }
+
+  .footer-info-form > input {
+    font-size: 14px;
+  }
+  .footer-info-btn {
+    height: 35px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .banner {
+    height: 95vh;
+  }
+  .show-products-items-img,
+  .product-img {
+    height: 250px;
+  }
+
+  .footer-info-type {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .header-container {
+    padding: 0px 35px;
+  }
+  .banner-content {
+    right: 180px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .banner {
+    height: 90vh;
+  }
+  .header-container-logo-img {
+    width: 90px;
+    height: 37.5px;
+  }
+  .banner-content-description {
+    font-size: 40px;
+  }
+  .banner-content {
+    right: 200px;
+  }
+  .show-products-items-img,
+  .product-img {
+    height: 200px;
+  }
+  .show-products-items-card {
+    height: 300px;
+  }
+  .product-desc {
+    font-size: 14px;
+  }
+  .footer {
+    height: 380px;
+  }
+  .footer-info-type {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .banner {
+    height: 85vh;
+  }
+  .banner-content {
+    right: 160px;
+  }
+  .show-products-items-card {
+    width: 33.3%;
+  }
+  .header-container-menu-list > li {
+    font-size: 14px;
+  }
+  .header-container-btn-icon {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .show-products-items-card {
+    width: 50%;
+  }
+
+  .show-products-items-img,
+  .product-img {
+    height: 280px;
+  }
+  .show-products-items-card {
+    height: 380px;
+  }
+  .footer {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 940px) {
+  .banner {
+    height: 80vh;
+  }
+  .show-products-items-card {
+    width: 50%;
+  }
+
+  .footer {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .banner-content {
+    right: 110px;
+  }
+  .footer {
+    height: auto;
+    padding: 30px 0px;
+  }
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-info-type {
+    width: 75%;
+    margin-bottom: 50px;
+    line-height: 20px;
+  }
+  .footer-info-type > div {
+    flex-direction: row;
+  }
+  .footer-info-type > div > span {
+    margin: auto;
+  }
+  .footer-info-btn {
+    margin-top: 20px;
+  }
+  .footer-info-type > h5 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+@media screen and (max-width: 810px) {
+  .banner {
+    height: 67vh;
+  }
+  .banner-content {
+    right: 70px;
+    background-color: rgba(255, 255, 255, 0.267);
+    padding: 30px;
+    border-radius: 10px;
+  }
+}
+/* since 790 add hambeger menu */
+@media screen and (max-width: 790px) {
+}

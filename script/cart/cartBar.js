@@ -4,19 +4,22 @@ const closeCart = document.getElementById("closeCart");
 closeCart.addEventListener("click", function () {
   popUpHelper.closeHelper();
 });
-
+// keep data in the variable and if click the cart then render from that variable
 // display cart bar
+let cartData = [];
+
 const addItemToCartBar = function (addItem) {
   let qty = 0;
   let totalPrice = 0;
+  cartData = addItem;
   const totalPriceDisplay = document.querySelector(".cart-bar-total-price");
   const checkOutBtn = document.querySelector(".cart-bar-checkout");
   const cartItemList = document.querySelector(".cart-bar-item-list");
   const cartQty = document.querySelector(".showQty");
 
   // get qty
-  // but when click del from cart this dont del
-  addItem.forEach((item) => {
+
+  cartData.forEach((item) => {
     qty += item.qty;
   });
   if (qty > 0) {
@@ -27,14 +30,14 @@ const addItemToCartBar = function (addItem) {
   }
 
   // add logic for init
-  if (addItem.length === 0) {
+  if (cartData.length === 0) {
     // render if have no item that user add to cart
     totalPriceDisplay.classList.add("hidden");
     checkOutBtn.classList.add("hidden");
     cartItemList.innerHTML = `<div class="cart-bar-no-item">No Item, Let's shop some cloths!!!</div>`;
   } else {
     // render item that user add to cart
-    cartItemList.innerHTML = addItem
+    cartItemList.innerHTML = cartData
       .map((item) => {
         totalPrice = totalPrice + item.price * item.qty;
         return `<div class="cart-bar-my-item">
@@ -57,13 +60,13 @@ const addItemToCartBar = function (addItem) {
     checkOutBtn.classList.remove("hidden");
     totalPriceDisplay.innerHTML = `Total: $ ${totalPrice.toLocaleString()}`;
   }
-  checkOut(addItem);
+  checkOut(cartData);
   // add delItem logic
-  if (addItem.length > 0) {
+  if (cartData.length > 0) {
     const delItem = document.querySelectorAll(".delItem");
     delItem.forEach((del, index) => {
       del.addEventListener("click", () => {
-        addItem.splice(index, 1);
+        cartData.splice(index, 1);
         addItemToCartBar(addItem);
       });
     });
