@@ -1,8 +1,11 @@
 const addToCartBtn = document.querySelector(".item-detail-add-to-cart-btn");
+const itemName = document.querySelector(".item-detail-info-name");
+const itemPrice = document.querySelector(".item-detail-info-price");
+const itemQty = document.getElementById("itemQty");
 const cartItem = [];
-const add = (x, cate = "All Product(default)") => {
+const add = () => {
   addToCartBtn.addEventListener("click", () => {
-    console.log(x, cate);
+    console.log(itemName.innerHTML, itemPrice.innerHTML, itemQty.innerHTML);
   });
 };
 

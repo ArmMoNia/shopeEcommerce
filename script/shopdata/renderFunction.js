@@ -1,9 +1,9 @@
 import selectItem from "../selectedItem/selectItem.js";
 
-const render = function (myData, y) {
+const render = function (myData) {
   const showItems = document.querySelector(".show-products-items-list");
   showItems.innerHTML = "";
-  for (let i = 0; i < myData.length; i++) {
+  for (let i = 0; i < 30; i++) {
     const element = document.createElement("div");
     element.classList.add("show-products-items-card");
     element.innerHTML = `
@@ -15,11 +15,7 @@ const render = function (myData, y) {
           </div>
           <div class="show-products-items-detail">
               <div>
-                  <p class="product-desc">${
-                    myData[i].name.length > 20
-                      ? myData[i].name.slice(0, 21) + ".."
-                      : myData[i].name
-                  }
+                  <p class="product-desc">${myData[i].name}
                   </p >
         <p class="product-price">$ ${myData[i].price}</p>
       </div>
@@ -31,9 +27,7 @@ const render = function (myData, y) {
     `;
     showItems.insertAdjacentElement("beforeend", element);
   }
-
   selectItem(myData);
 };
 
-/* add logic fav */
 export default render;

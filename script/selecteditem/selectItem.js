@@ -6,12 +6,11 @@ const addToCartBtn = document.querySelector(".item-detail-add-to-cart-btn");
 const increaseQtyBtn = document.getElementById("increaseQty");
 const decreaseQtyBtn = document.getElementById("decreaseQty");
 const itemQty = document.getElementById("itemQty");
-
+let cartData = [];
 const selectItem = function (myData) {
   // init data
   let addItem;
   let qty = 1;
-  let cartData = [];
 
   itemQty.innerHTML = qty;
 
@@ -22,7 +21,8 @@ const selectItem = function (myData) {
       myData.forEach((data) => {
         if (myData.indexOf(data) === index) {
           const copyObj = Object.assign({}, myData[index]);
-          renderSelectedItem(myData[index]);
+          renderSelectedItem(copyObj);
+          console.log(copyObj);
           addItem = copyObj;
         }
       });
@@ -49,7 +49,6 @@ const selectItem = function (myData) {
     itemQty.innerHTML = qty;
     popUpHelper.closeImmediately();
   };
-
   addToCartBtn.addEventListener("click", () => addToCart());
 };
 
