@@ -6,8 +6,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 75%;
+  width: 90%;
+  height: 90%;
   padding: 60px;
   background-color: white;
   border-radius: 5px;
@@ -29,6 +29,7 @@
 
 .product-sum::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 .product-sum::-webkit-scrollbar-thumb {
   background-color: #999;
@@ -38,7 +39,6 @@
 .product-total {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 35%;
   padding: 30px;
   border: 1px solid #e6e6e6;
@@ -119,4 +119,36 @@
 }
 .product-total-head {
   font-size: 35px;
+  margin-bottom: 10px;
+}
+.checkout-cart-total > h6 {
+  margin-top: 10px;
+}
+#subtotal-checkout,
+#shipping-checkout,
+#total-checkout {
+  font-weight: lighter;
+}
+#shipping-fees-note {
+  color: #999;
+  font-size: 12px;
+}
+.contact-shipping {
+  min-width: 100%;
+  padding: 2px;
+  border: 1px solid rgba(128, 128, 128, 0.432);
+  margin-bottom: 10px;
+}
+.location-shipping {
+  margin-top: 10px;
+  padding: 10px;
+  height: 110px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 180px;
+  max-height: 180px;
+  border: 1px solid rgba(128, 128, 128, 0.432);
+}
+.checkout-cart-total {
+  margin-bottom: 15px;
 }

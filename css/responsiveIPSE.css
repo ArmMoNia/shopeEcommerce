@@ -1,4 +1,4 @@
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 375px) {
   .header-container {
     position: relative;
     width: 100%;
@@ -13,10 +13,7 @@
     display: none;
   }
   .banner {
-    /* width: 100%; */
     background-size: cover;
-
-    /* height: 100vh; */
   }
   .banner-button-next,
   .banner-button-prev {
@@ -40,6 +37,14 @@
   }
   .footer-copyright > p {
     font-size: 10px;
+  }
+  .show-products-items-card {
+    width: 100%;
+  }
+  .header-container-logo-img {
+    top: 20px;
+    left: 20px;
+    height: 30px;
   }
   .item-detail-info-name {
     font-size: 15px;

@@ -8,7 +8,6 @@ const setUpDataShop = {
       const response = await fetch(this.api_url);
       const data = await response.json();
       this.pushItem(data);
-
       // render shop
       render(this.myData);
     } catch (err) {

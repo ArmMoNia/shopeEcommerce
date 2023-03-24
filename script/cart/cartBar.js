@@ -12,18 +12,21 @@ const addItemToCartBar = function (addItem) {
   const totalPriceDisplay = document.querySelector(".cart-bar-total-price");
   const checkOutBtn = document.querySelector(".cart-bar-checkout");
   const cartItemList = document.querySelector(".cart-bar-item-list");
-  const cartQty = document.querySelector(".showQty");
+  const cartQty = document.querySelectorAll(".showQty");
 
   // get qty
-
   addItem.forEach((item) => {
     qty += item.qty;
   });
   if (qty > 0) {
-    cartQty.classList.remove("hidden");
-    cartQty.innerHTML = qty;
+    cartQty.forEach((x) => {
+      x.classList.remove("hidden");
+      x.innerHTML = qty;
+    });
   } else if (qty === 0) {
-    cartQty.classList.add("hidden");
+    cartQty.forEach((x) => {
+      x.classList.add("hidden");
+    });
   }
 
   if (addItem.length === 0) {
@@ -41,13 +44,11 @@ const addItemToCartBar = function (addItem) {
         <img class="cart-bar-my-item-display" src="${item.image}"  />
       </div>
       <div class="cart-bar-my-item-info">
-          <p class="cart-bar-my-item-name">${
-            item.name.length > 16 ? item.name.slice(0, 16) + ".." : item.name
-          }</p>
+          <p class="cart-bar-my-item-name">${item.name}</p>
           <p class="cart-bar-my-item-qty">Qty: ${item.qty}</p>
           <p class="cart-bar-my-item-price">$ ${(
             item.price * item.qty
-          ).toLocaleString()} </p>
+          ).toLocaleString()}.00 </p>
       </div>
       <button class="delItem">Del</button>
       </div>
@@ -56,7 +57,7 @@ const addItemToCartBar = function (addItem) {
       .join("");
     totalPriceDisplay.classList.remove("hidden");
     checkOutBtn.classList.remove("hidden");
-    totalPriceDisplay.innerHTML = `Total: $ ${totalPrice.toLocaleString()}`;
+    totalPriceDisplay.innerHTML = `Total: $ ${totalPrice.toLocaleString()}.00`;
   }
   checkOut(addItem);
   // del Item

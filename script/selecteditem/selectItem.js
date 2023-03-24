@@ -21,7 +21,6 @@ const selectItem = function (myData) {
         if (myData.indexOf(data) === index) {
           const copyObj = Object.assign({}, myData[index]);
           renderSelectedItem(copyObj);
-          console.log(copyObj);
           addItem = copyObj;
         }
       });

@@ -17,7 +17,7 @@ const render = function (myData) {
               <div>
                   <p class="product-desc">${myData[i].name}
                   </p >
-        <p class="product-price">$ ${myData[i].price.toLocaleString()}</p>
+        <p class="product-price">$ ${myData[i].price.toLocaleString()}.00</p>
       </div>
       
       <div>

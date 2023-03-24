@@ -10,7 +10,6 @@
       href="assets/Title/near-shop-website-favicon-black.png"
       type="image/x-icon"
     />
-
     <link href="./css/main.css" rel="stylesheet" />
   </head>
   <body>
@@ -26,24 +25,28 @@
         </a>
         <div class="header-container-menu">
           <ul class="header-container-menu-list">
-            <li><a href="#">Home</a></li>
-            <li href="#product--overview" class="to-shop">Shop</li>
-            <!-- <li>Blog</li> -->
-            <li>About</li>
+            <li class="head-li hambar"><a href="#">Home</a></li>
+            <li href="#product--overview" class="to-shop head-li hambar">
+              Shop
+            </li>
+            <li class="head-li hambar">About</li>
+            <li class="head-li li-cart">
+              Cart
+              <div class="showQty hidden"></div>
+            </li>
           </ul>
         </div>
         <div class="header-container-btn">
           <input placeholder="Search" class="search-bar-on-top" autofocus />
-          <!-- <div class="header-container-btn-icon search-icon-on-top">
-            <i class="fa-sharp fa-solid fa-magnifying-glass fa-lg"></i>
-          </div> -->
           <div class="header-container-btn-icon" id="header-cart-icon">
             <i class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
             <div class="showQty hidden"></div>
           </div>
-          <!-- <div class="header-container-btn-icon">
-            <i class="fa-regular fa-heart fa-lg"></i>
-          </div> -->
+        </div>
+        <div class="ham-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
       </div>
     </header>
@@ -112,14 +115,6 @@
               <p class="item-detail-info-decription"></p>
             </div>
             <div class="item-detail-select">
-              <!-- <div class="item-detail-select-prop">
-                <div class="item-detail-select-prop-desc">Size</div>
-                <div>Choose an option</div>
-              </div> -->
-              <!-- <div class="item-detail-select-prop">
-                <div class="item-detail-select-prop-desc">Color</div>
-                <div>Choose an option</div>
-              </div> -->
               <div class="item-detail-add-remove">
                 <button class="item-detail-add-remove-btn" id="decreaseQty">
                   -
@@ -167,20 +162,7 @@
               <th>QUANTITY</th>
               <th>TOTAL</th>
             </tr>
-            <div class="checkout-container">
-              <!-- <tr class="product-sum-detail">
-                <td>
-                  <img
-                    class="testimg"
-                    src="/assets/BG/male-dressed-warm-jacket.jpg"
-                  />
-                </td>
-                <td>Fresh Strawberries</td>
-                <td>$ 36.00</td>
-                <td>7</td>
-                <td>$ 36.00</td>
-              </tr> -->
-            </div>
+            <div class="checkout-container"></div>
           </tbody>
         </table>
         <div class="product-sum-footer">
@@ -197,19 +179,22 @@
       <div class="product-total">
         <h1 class="product-total-head">CART TOTALS</h1>
         <div class="checkout-cart-total">
-          <h6>Subtotal:</h6>
-          <p id="subtotal-checkout"></p>
+          <h6>
+            Subtotal:
+            <i id="subtotal-checkout"></i>
+          </h6>
+          <h6>Shipping Fees: <i id="shipping-checkout">$</i></h6>
+          <i id="shipping-fees-note">The shipping fees $5 per item.</i>
         </div>
         <div class="checkout-cart-total">
           <h6>Shipping:</h6>
-          <p>
-            There are no shipping methods available. Please check your address,
-            or contact us if you need any help.
-          </p>
+          <div><textarea class="location-shipping"></textarea></div>
         </div>
         <div class="checkout-cart-total">
-          <h6>Total:</h6>
-          <p id="total-checkout"></p>
+          <h6>
+            Total:
+            <i id="total-checkout"></i>
+          </h6>
         </div>
         <div>
           <button class="proceed-btn">PROCEED TO CHECKOUT</button>

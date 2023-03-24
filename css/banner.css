@@ -11,9 +11,11 @@
   transition: ease-in-out 1s;
 }
 .banner-content {
+  position: relative;
+  right: 300px;
   max-width: 400px;
-  margin: 0 1100px 0 150px;
   transition: ease-in-out 0.3s;
+  margin: 0px auto;
 }
 .banner-content-title {
   color: rgb(66, 61, 61);

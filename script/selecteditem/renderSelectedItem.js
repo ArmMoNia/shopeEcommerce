@@ -13,7 +13,7 @@ const renderSelectedItem = function (myData) {
   itemImg.style.backgroundSize = `cover`;
   itemImg.style.backgroundPosition = `center`;
   itemName.innerHTML = ` ${myData.name}`;
-  itemPrice.innerHTML = `$ ${myData.price.toLocaleString()}`;
+  itemPrice.innerHTML = `$ ${myData.price.toLocaleString()}.00`;
   itemDescription.innerHTML = `<h5>Information:</h5>  ${myData.decription}`;
 };
 
