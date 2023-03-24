@@ -358,4 +358,36 @@
   .cart-bar-my-item-info {
     margin-right: auto;
   }
+  .item-detail-content {
+    flex-direction: column;
+  }
+  .show-products {
+    margin: auto;
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  .item-detail-img,
+  .item-detail-buy {
+    height: 50%;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .item-detail-info-decription {
+    min-height: 110px;
+    max-height: 160px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .show-products-items-card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .popup-item-detail {
+    height: 90%;
+  }
 }

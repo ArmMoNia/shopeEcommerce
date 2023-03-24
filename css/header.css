@@ -14,7 +14,7 @@
   width: 100%;
   padding: 0 110px;
   /* transition: ease-in-out 0.7s; */
-  z-index: 10000;
+  z-index: 5;
 }
 
 .header-container-logo {
