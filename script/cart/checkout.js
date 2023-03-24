@@ -8,8 +8,7 @@ const totalCheckout = document.getElementById("total-checkout");
 const shipFees = document.getElementById("shipping-checkout");
 
 let itemCheckout = [];
-let totalPriceCheckout = 0;
-let qtyForFees = 0;
+
 const checkOut = (addItem) => {
   itemCheckout = addItem;
 };
@@ -34,6 +33,8 @@ const tableHead = `<thead>
                   </tr></thead>`;
 
 const renderCheckOut = (itemCheckout) => {
+  let totalPriceCheckout = 0;
+  let fees = 0;
   checkoutTable.innerHTML =
     tableHead +
     "<tbody class='arm'>" +
@@ -41,7 +42,7 @@ const renderCheckOut = (itemCheckout) => {
       .map((item) => {
         const total = item.qty * item.price;
         totalPriceCheckout += total;
-        qtyForFees += item.qty * 5;
+        fees += item.qty * 5;
         return `<tr class="product-sum-detail">
     <td>
       <img
@@ -58,11 +59,11 @@ const renderCheckOut = (itemCheckout) => {
       })
       .join("") +
     "</tbody>";
-  shipFees.innerHTML = "$" + qtyForFees.toLocaleString() + ".00";
+  shipFees.innerHTML = "$" + fees.toLocaleString() + ".00";
   subtotalCheckout.innerHTML =
     "$" + totalPriceCheckout.toLocaleString() + ".00";
   totalCheckout.innerHTML =
-    "$" + (totalPriceCheckout + qtyForFees).toLocaleString() + ".00";
+    "$" + (totalPriceCheckout + fees).toLocaleString() + ".00";
 };
 
 export default checkOut;
